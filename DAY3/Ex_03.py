@@ -11,9 +11,9 @@ for lines in f:
         else:
             num_of_words[word] = 1
         for let in word:
-            if let in num_of_letters:
-                num_of_letters[let] += 1
-            else:
+            if let.isalpha():
+                if let in num_of_letters:
+                    num_of_letters[let] += 1
                 num_of_letters[let] = 1
 
 number_of_words = len(num_of_words)
